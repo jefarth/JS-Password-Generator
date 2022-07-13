@@ -5,8 +5,14 @@ const uppercase = `ABCDEFGHIJKLMNOPQRSTUVWXYZ`;
 const number = `1234567890`;
 const character = `!@#$%^&*()_-+={}[];:'"~<,>.?/|`;
 
-function generatePassword() {
+function checkUpperCase() {
+  let checkUpper;
 
+  checkUpper = prompt(`Do you want to use upper case letters? \n(Enter Yes or No)`);
+}
+
+function generatePassword() {
+ checkUpperCase();
 };
 
 // Write password to the #password input
