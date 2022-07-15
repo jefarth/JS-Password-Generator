@@ -9,6 +9,23 @@ function checkUpperCase() {
   let checkUpper;
 
   checkUpper = prompt(`Do you want to use upper case letters? \n(Enter Yes or No)`);
+  checkUpper = checkUpper.toLowerCase();
+
+  if (checkUpper === null || checkUpper === "") {
+    alert(`Please enter yes or no.`);
+    checkUpperCase();
+  } else if (checkUpper === `yes` || checkUpper === `y`) {
+   checkUpper = true;
+   alert("you said yes");
+   return checkUpper;
+  } else if (checkUpper === `no` || checkUpper === `n`) {
+    checkUpper = false;
+    alert("you chose no");
+    return checkUpper;
+  } else {
+    alert(`Please only enter yes or no.`);
+    checkUpperCase();
+  }
 }
 
 function generatePassword() {
@@ -21,7 +38,6 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
-
 };
 
 // Add event listener to generate button
