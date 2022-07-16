@@ -5,8 +5,7 @@ const uppercase = `ABCDEFGHIJKLMNOPQRSTUVWXYZ`;
 const number = `1234567890`;
 const character = `!@#$%^&*()_-+={}[];:'"~<,>.?/|`;
 
-function checkUpperCase() {
-  let checkUpper;
+function checkUpperCase(checkUpper) {
 
   checkUpper = prompt(`Do you want to use upper case letters? \n(Enter Yes or No)`);
   checkUpper = checkUpper.toLowerCase();
