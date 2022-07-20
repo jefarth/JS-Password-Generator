@@ -6,6 +6,7 @@ const number = `1234567890`;
 const character = `!@#$%^&*()_-+={}[];:'"~<,>.?/|`;
 
 function checkUpperCase(checkUpper) {
+
   checkUpper = prompt(`Do you want to use upper case letters? \n(Enter Yes or No)`);
   checkUpper = checkUpper.toLowerCase();
 
@@ -13,18 +14,16 @@ function checkUpperCase(checkUpper) {
     alert(`Please enter yes or no.`);
     checkUpperCase();
   } else if (checkUpper === `yes` || checkUpper === `y`) {
-   checkUpper = true;
-   alert("You entered yes.");
-   return checkUpper;
+    checkUpper = true;
+    alert("You entered yes.");
   } else if (checkUpper === `no` || checkUpper === `n`) {
     checkUpper = false;
     alert("You entered no.");
-    return checkUpper;
   } else {
     alert(`Please only enter yes or no.`);
     checkUpperCase();
   }
-  return;
+  return checkUpper;
 }
 
 function generatePassword() {
