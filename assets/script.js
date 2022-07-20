@@ -26,25 +26,25 @@ function checkLength(passwordLength) {
   return passwordLength;
 }
 
-function checkUpperCase(checkUpper) {
-  checkUpper = prompt(`Do you want to use upper case letters? \n(Enter Yes or No)`);
-  checkUpper = checkUpper.toLowerCase();
+function checkUpperCase(wantUpper) {
+  wantUpper = prompt(`Do you want to use upper case letters? \n(Enter Yes or No)`);
+  wantUpper = wantUpper.toLowerCase();
 
-  if (checkUpper === null || checkUpper === "") {
+  if (wantUpper === null || wantUpper === "") {
     alert(`Please enter yes or no.`);
     checkUpperCase();
-  } else if (checkUpper === `yes` || checkUpper === `y`) {
-    checkUpper = true;
+  } else if (wantUpper === `yes` || wantUpper === `y`) {
+    wantUpper = true;
     alert("You entered yes.");
-  } else if (checkUpper === `no` || checkUpper === `n`) {
-    checkUpper = false;
+  } else if (wantUpper === `no` || wantUpper === `n`) {
+    wantUpper = false;
     alert("You entered no.");
   } else {
     alert(`Please only enter yes or no.`);
     checkUpperCase();
   }
-  console.log(checkUpper);
-  return checkUpper;
+  console.log(wantUpper);
+  return wantUpper;
 }
 
 function checkNumber(wantNumber) {
