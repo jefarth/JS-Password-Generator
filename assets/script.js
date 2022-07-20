@@ -47,9 +47,31 @@ function checkUpperCase(checkUpper) {
   return checkUpper;
 }
 
+function checkNumber(wantNumber) {
+  wantNumber = prompt(`Do you want to use numbers? \n(Enter Yes or No)`);
+  wantNumber = wantNumber.toLowerCase();
+
+  if (wantNumber === null || wantNumber === "") {
+    alert(`Please enter yes or no.`);
+    checkNumber();
+  } else if (wantNumber === `yes` || wantNumber === `y`) {
+    wantNumber = true;
+    alert("You entered yes.");
+  } else if (wantNumber === `no` || wantNumber === `n`) {
+    wantNumber = false;
+    alert("You entered no.");
+  } else {
+    alert(`Please only enter yes or no.`);
+    checkNumber();
+  }
+  console.log(wantNumber);
+  return wantNumber;
+}
+
 function generatePassword() {
   checkLength();
   checkUpperCase();
+  checkNumber();
 };
 
 // Write password to the #password input
