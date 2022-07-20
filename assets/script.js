@@ -68,10 +68,32 @@ function checkNumber(wantNumber) {
   return wantNumber;
 }
 
+function checkSpecial(wantSpecial) {
+  wantSpecial = prompt(`Do you want to use special characters? (i.e. !, @, #) \n(Enter Yes or No)`);
+  wantSpecial = wantSpecial.toLowerCase();
+
+  if (wantSpecial === null || wantSpecial === "") {
+    alert(`Please enter yes or no.`);
+    checkSpecial();
+  } else if (wantSpecial === `yes` || wantSpecial === `y`) {
+    wantSpecial = true;
+    alert("You entered yes.");
+  } else if (wantSpecial === `no` || wantSpecial === `n`) {
+    wantSpecial = false;
+    alert("You entered no.");
+  } else {
+    alert(`Please only enter yes or no.`);
+    checkSpecial();
+  }
+  console.log(wantSpecial);
+  return wantSpecial;
+}
+
 function generatePassword() {
   checkLength();
   checkUpperCase();
   checkNumber();
+  checkSpecial();
 };
 
 // Write password to the #password input
