@@ -4,8 +4,12 @@ const lowercase = `abcdefghijklmnopqrstuvwxyz`;
 const uppercase = `ABCDEFGHIJKLMNOPQRSTUVWXYZ`;
 const number = `1234567890`;
 const character = `!@#$%^&*()_-+={}[];:'"~<,>.?/|`;
+let passwordLength;
+let wantUpper;
+let wantNumber;
+let wantSpecial;
 
-function checkLength(passwordLength) {
+function checkLength() {
   passwordLength = prompt(`Please enter how many characters you want your password to be. \n(Enter a number between 8 and 64)`);
 
   if (passwordLength === null) {
@@ -26,7 +30,7 @@ function checkLength(passwordLength) {
   return passwordLength;
 }
 
-function checkUpperCase(wantUpper) {
+function checkUpperCase() {
   wantUpper = prompt(`Do you want to use upper case letters? \n(Enter Yes or No)`);
   wantUpper = wantUpper.toLowerCase();
 
@@ -47,7 +51,7 @@ function checkUpperCase(wantUpper) {
   return wantUpper;
 }
 
-function checkNumber(wantNumber) {
+function checkNumber() {
   wantNumber = prompt(`Do you want to use numbers? \n(Enter Yes or No)`);
   wantNumber = wantNumber.toLowerCase();
 
@@ -68,7 +72,7 @@ function checkNumber(wantNumber) {
   return wantNumber;
 }
 
-function checkSpecial(wantSpecial) {
+function checkSpecial() {
   wantSpecial = prompt(`Do you want to use special characters? (i.e. !, @, #) \n(Enter Yes or No)`);
   wantSpecial = wantSpecial.toLowerCase();
 
