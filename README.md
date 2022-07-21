@@ -4,9 +4,9 @@
   ## Description
   This is an application that a user can use to generate a random secure password from a variety of chosen criteria. Encouraged for use when working with sensitive data that should be protected.
 
-  ![Home Screen](assets\images\home-screen.png)
-  ![Prompt Screen](assets\images\prompt-screen.png)
-  ![Finished Screen](assets\images\finished-screen.png)
+  ![Home Screen](assets/images/home-screen.png)
+  ![Prompt Screen](assets/images/prompt-screen.png)
+  ![Finished Screen](assets/images/finished-screen.png)
 
   ## Table of Contents 
 
