@@ -26,7 +26,6 @@ function checkLength() {
   } else {
     alert(`Password length set at ${passwordLength} characters. Please follow the upcoming prompts to choose specific criteria.`);
   }
-  console.log(passwordLength);
   return passwordLength;
 }
 
@@ -39,15 +38,14 @@ function checkUpperCase() {
     checkUpperCase();
   } else if (wantUpper === `yes` || wantUpper === `y`) {
     wantUpper = true;
-    // alert("You entered yes.");
+    alert("You entered yes.");
   } else if (wantUpper === `no` || wantUpper === `n`) {
     wantUpper = false;
-    // alert("You entered no.");
+    alert("You entered no.");
   } else {
     alert(`Please only enter yes or no.`);
     checkUpperCase();
   }
-  console.log(wantUpper);
   return wantUpper;
 }
 
@@ -60,15 +58,14 @@ function checkNumber() {
     checkNumber();
   } else if (wantNumber === `yes` || wantNumber === `y`) {
     wantNumber = true;
-    // alert("You entered yes.");
+    alert("You entered yes.");
   } else if (wantNumber === `no` || wantNumber === `n`) {
     wantNumber = false;
-    // alert("You entered no.");
+    alert("You entered no.");
   } else {
     alert(`Please only enter yes or no.`);
     checkNumber();
   }
-  console.log(wantNumber);
   return wantNumber;
 }
 
@@ -81,15 +78,14 @@ function checkSpecial() {
     checkSpecial();
   } else if (wantSpecial === `yes` || wantSpecial === `y`) {
     wantSpecial = true;
-    // alert("You entered yes.");
+    alert("You entered yes.");
   } else if (wantSpecial === `no` || wantSpecial === `n`) {
     wantSpecial = false;
-    // alert("You entered no.");
+    alert("You entered no.");
   } else {
     alert(`Please only enter yes or no.`);
     checkSpecial();
   }
-  console.log(wantSpecial);
   return wantSpecial;
 }
 
