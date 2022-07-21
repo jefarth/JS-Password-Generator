@@ -27,7 +27,7 @@
   This project is licensed under: MIT License.
 
   ## Contributions
-  Contributions made by: I created all of the JavaScript to get this application to run, aside from the writePassword() function with the correlating event listeners. 
+  Contributions made: I created all of the JavaScript to get this application to run, aside from the writePassword() function with the correlating event listeners. The CSS and HTML were provided.
 
   ## Tests
   Testing on this application was performed by: The test operation for this project was primarily using console.log()'s to see my data values as well as when and where it is firing. This was accomplished by refreshing the page to see any changes made.
