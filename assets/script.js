@@ -35,10 +35,10 @@ function checkUpperCase(wantUpper) {
     checkUpperCase();
   } else if (wantUpper === `yes` || wantUpper === `y`) {
     wantUpper = true;
-    alert("You entered yes.");
+    // alert("You entered yes.");
   } else if (wantUpper === `no` || wantUpper === `n`) {
     wantUpper = false;
-    alert("You entered no.");
+    // alert("You entered no.");
   } else {
     alert(`Please only enter yes or no.`);
     checkUpperCase();
@@ -56,10 +56,10 @@ function checkNumber(wantNumber) {
     checkNumber();
   } else if (wantNumber === `yes` || wantNumber === `y`) {
     wantNumber = true;
-    alert("You entered yes.");
+    // alert("You entered yes.");
   } else if (wantNumber === `no` || wantNumber === `n`) {
     wantNumber = false;
-    alert("You entered no.");
+    // alert("You entered no.");
   } else {
     alert(`Please only enter yes or no.`);
     checkNumber();
@@ -77,10 +77,10 @@ function checkSpecial(wantSpecial) {
     checkSpecial();
   } else if (wantSpecial === `yes` || wantSpecial === `y`) {
     wantSpecial = true;
-    alert("You entered yes.");
+    // alert("You entered yes.");
   } else if (wantSpecial === `no` || wantSpecial === `n`) {
     wantSpecial = false;
-    alert("You entered no.");
+    // alert("You entered no.");
   } else {
     alert(`Please only enter yes or no.`);
     checkSpecial();
@@ -94,13 +94,39 @@ function generatePassword() {
   checkUpperCase();
   checkNumber();
   checkSpecial();
+
+  let password = "";
+  let lower = lowercase;
+
+  if (wantUpper && wantNumber && wantSpecial) {
+     lower += uppercase + number + character;
+  } else if (wantUpper && wantNumber) {
+    lower += uppercase+ number;
+  } else if (wantUpper && wantSpecial) {
+    lower += uppercase + character;
+  } else if (wantNumber && wantSpecial) {
+    lower += number && character
+  } else if (wantUpper) {
+    lower += uppercase;
+  }  else if (wantNumber) {
+    lower += number;
+  } else if (wantSpecial) {
+    lower += character;
+  } else {
+    lower;
+  }
+
+  for (let i = 0; i < passwordLength; i++) {
+    password += lower.charAt(Math.floor(Math.random() * lower.length));
+  }
+  return password;
 };
 
 // Write password to the #password input
 function writePassword() {
   let password = generatePassword();
   let passwordText = document.querySelector("#password");
-
+  
   passwordText.value = password;
 };
 
